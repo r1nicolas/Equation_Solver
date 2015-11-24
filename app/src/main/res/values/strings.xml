@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Solveur d\'equation</string>
+    <string name="title_activity_get_system_size">Systeme d\'equation lineaire</string>
+    <string name="title_activity_get_input_system">Systeme d\'equation lineaire</string>
+    <string name="title_activity_get_polynomial_degree">Polynome</string>
+    <string name="title_activity_get_input_polynomial">Polynome</string>
+
+    <string name="action_settings">Options</string>
+
+    <string name="system">Systeme d\'equation lineaire</string>
+    <string name="polynomial">Polynome</string>
+    <string name="size">Taille</string>
+    <string name="ok">OK</string>
+    <string name="degree">Degre</string>
+
+    <string name="hello_world">Hello world!</string>
+</resources>

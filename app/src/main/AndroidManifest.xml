@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="rnicolas.equation_solver" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GetSystemSizeActivity"
+            android:label="@string/title_activity_get_system_size"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="rnicolas.equation_solver.MainActivity" />
+        </activity>
+        <activity
+            android:name=".GetInputSystem"
+            android:label="@string/title_activity_get_input_system"
+            android:parentActivityName=".GetSystemSizeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="rnicolas.equation_solver.GetSystemSizeActivity" />
+        </activity>
+        <activity
+            android:name=".GetPolynomialDegree"
+            android:label="@string/title_activity_get_polynomial_degree"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="rnicolas.equation_solver.MainActivity" />
+        </activity>
+        <activity
+            android:name=".GetInputPolynomial"
+            android:label="@string/title_activity_get_input_polynomial"
+            android:parentActivityName=".GetPolynomialDegree" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="rnicolas.equation_solver.GetPolynomialDegree" />
+        </activity>
+    </application>
+
+</manifest>
