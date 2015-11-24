@@ -195,7 +195,6 @@ public class PolynomialSolver {
             for (i = 0; i < tmpResult.length; i++)
                 result[i + length] = tmpResult[i];
         } else {
-            System.out.println("q == 0");
             tmpCoef = new double[]{r, q, p, 0, 1};
             tmpSolver = new PolynomialSolver(4, tmpCoef);
             result = tmpSolver.solve();
@@ -207,7 +206,32 @@ public class PolynomialSolver {
     }
 
     double[] derivative(){
-        
+        double[] result = new double[degree];
+        int i;
+
+        for (i = 1;i <= degree;i++){
+            result[i - 1] = i * coef[i];
+        }
+        return (result);
+    }
+
+    private static double[] removeDuplicates(double[] arr) {
+        int i, j;
+        double[] result = new double[arr.length];
+
+        Arrays.sort(arr);
+
+        j = 0;
+        result[0] = arr[0];
+        for (i = 1;i < arr.length;i++) {
+            if (arr[i] != result[j]) {
+                j++;
+                result[j] = arr[i];
+            }
+        }
+        result = Arrays.copyOf(result, j + 1);
+
+        return (result);
     }
 
     double[] solve() {
@@ -235,7 +259,8 @@ public class PolynomialSolver {
             result = solveFourth();
         else
             result = new double[0];
-        return (result);
+
+        return (removeDuplicates(result));
     }
 }
 
