@@ -234,6 +234,44 @@ public class PolynomialSolver {
         return (result);
     }
 
+    public double value(double x) {
+        int i;
+        double result;
+
+        result = coef[0];
+        for (i = 1;i <= degree;i++)
+            result = result + coef[i] * Math.pow(x, i);
+
+        return (result);
+    }
+
+    double[] solveGeneral() {
+        double[] result, derivCoef, extrema, values;
+        PolynomialSolver derivSolver;
+        int negInf, posInf, i;
+
+        result = new double[degree];
+        derivCoef = derivative();
+        derivSolver = new PolynomialSolver(degree - 1, derivCoef);
+        extrema = derivSolver.solve();
+
+        if (coef[degree] > 0)
+            posInf = 1;
+        else
+            posInf = -1;
+        if (degree % 2 == 0)
+            negInf = posInf;
+        else
+            negInf = -posInf;
+
+        values = new double[extrema.length];
+        for (i = 0;i < extrema.length;i++)
+            values[i] = value(extrema[i]);
+
+
+        return (result);
+    }
+
     double[] solve() {
         double[] result, tmp;
         PolynomialSolver help;
@@ -258,7 +296,7 @@ public class PolynomialSolver {
         else if (degree == 4)
             result = solveFourth();
         else
-            result = new double[0];
+            result = solveGeneral();
 
         return (removeDuplicates(result));
     }
