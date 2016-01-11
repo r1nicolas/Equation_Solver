@@ -216,23 +216,27 @@ public class PolynomialSolver {
     }
 
     private static double[] removeDuplicates(double[] arr) {
-        int i, j;
-        double[] result = new double[arr.length];
+        if (arr.length > 0) {
+            int i, j;
+            double[] result = new double[arr.length];
 
-        Arrays.sort(arr);
+            Arrays.sort(arr);
 
-        j = 0;
-        result[0] = arr[0];
-        for (i = 1;i < arr.length;i++) {
-            if (arr[i] != result[j]) {
-                j++;
-                result[j] = arr[i];
+            j = 0;
+            result[0] = arr[0];
+            for (i = 1; i < arr.length; i++) {
+                if (arr[i] != result[j]) {
+                    j++;
+                    result[j] = arr[i];
+                }
             }
-        }
-        result = Arrays.copyOf(result, j + 1);
+            result = Arrays.copyOf(result, j + 1);
 
-        return (result);
+            return (result);
+        } else
+            return (arr);
     }
+
 
     public double value(double x) {
         int i;
@@ -245,29 +249,65 @@ public class PolynomialSolver {
         return (result);
     }
 
+    private static double avg(double a, double b) {
+        return ((a + b) / 2);
+    }
+
+    private double newton(double start, PolynomialSolver deriv) {
+        int i;
+        double result;
+
+        result = start;
+        for (i = 0;i < 10;i++) {
+            result = result - (value(result)/deriv.value(result));
+        }
+        return (result);
+    }
+
     double[] solveGeneral() {
         double[] result, derivCoef, extrema, values;
         PolynomialSolver derivSolver;
-        int negInf, posInf, i;
+        int negInf, posInf, i, j;
 
-        result = new double[degree];
         derivCoef = derivative();
         derivSolver = new PolynomialSolver(degree - 1, derivCoef);
         extrema = derivSolver.solve();
 
-        if (coef[degree] > 0)
-            posInf = 1;
-        else
-            posInf = -1;
-        if (degree % 2 == 0)
-            negInf = posInf;
-        else
-            negInf = -posInf;
+        posInf = (coef[degree] > 0 ? 1 : -1);
+        negInf = (degree % 2 == 0 ? posInf : -posInf);
 
-        values = new double[extrema.length];
-        for (i = 0;i < extrema.length;i++)
-            values[i] = value(extrema[i]);
-
+        if (extrema.length > 0) {
+            result = new double[degree];
+            values = new double[extrema.length];
+            for (i = 0; i < extrema.length; i++) {
+                values[i] = value(extrema[i]);
+            }
+            j = 0;
+            if (values[0] * negInf < 0) {
+                result[0] = newton(extrema[0] - 1, derivSolver);
+                j = 1;
+            }
+            for (i = 0; i < values.length - 1; i++) {
+                if (values[i] == 0) {
+                    result[j] = extrema[i];
+                    j++;
+                } else if (values[i] * values[i + 1] < 0) {
+                    result[j] = newton(avg(extrema[i], extrema[i + 1]), derivSolver);
+                    j++;
+                }
+            }
+            if (values[values.length - 1] == 0) {
+                result[j] = extrema[values.length - 1];
+                j++;
+            } else if (values[values.length - 1] * posInf < 0) {
+                result[j] = newton(extrema[values.length - 1] + 1, derivSolver);
+                j++;
+            }
+            result = Arrays.copyOf(result, j);
+        } else {
+            result = new double[1];
+            result[0] = newton(0, derivSolver);
+        }
 
         return (result);
     }

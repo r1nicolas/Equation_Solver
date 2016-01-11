@@ -95,7 +95,7 @@ public class GetInputPolynomial extends AppCompatActivity {
         PolynomialSolver solver = new PolynomialSolver(n, tab);
         sol = solver.solve();
         if (sol.length == 0)
-            resultString = "WIP";
+            resultString = "Pas de solution dans R";
         else {
             for (i = 0;i < sol.length;i++) {
                 if (sol[i] == (long) sol[i])
