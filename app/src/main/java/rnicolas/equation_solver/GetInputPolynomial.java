@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class GetInputPolynomial extends AppCompatActivity {
 
     private int n;
@@ -84,6 +86,7 @@ public class GetInputPolynomial extends AppCompatActivity {
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         String resultString = "";
         int i;
+        DecimalFormat df = new DecimalFormat("#.##");
 
         for (i = 0;i <= n;i++) {
             try {
@@ -98,10 +101,7 @@ public class GetInputPolynomial extends AppCompatActivity {
             resultString = "Pas de solution dans R";
         else {
             for (i = 0;i < sol.length;i++) {
-                if (sol[i] == (long) sol[i])
-                    resultString += "x<sub><small>" + (i + 1) + "</small></sub>" + " = " + ((long) sol[i]) + "<br />";
-                else
-                    resultString += "x<sub><small>" + (i + 1) + "</small></sub>" + " = " + sol[i] + "<br />";
+                resultString += "x<sub><small>" + (i + 1) + "</small></sub>" + " = " + df.format(sol[i]) + "<br />";
             }
         }
         alertBuilder.setMessage(Html.fromHtml(resultString));

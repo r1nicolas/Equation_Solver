@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class GetInputSystem extends AppCompatActivity {
 
     private int size;
@@ -70,6 +72,7 @@ public class GetInputSystem extends AppCompatActivity {
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         String resultString = "";
         int i, j;
+        DecimalFormat df = new DecimalFormat("#.##");
 
         for (i = 0;i < size;i++) {
             for (j = 0;j <= size;j++) {
@@ -84,10 +87,7 @@ public class GetInputSystem extends AppCompatActivity {
         try {
             sol = solver.solve();
             for (i = 0;i < size;i++) {
-                if (sol[i] == (long) sol[i])
-                    resultString += "x<sub><small>" + (i + 1) + "</small></sub>" + " = " + ((long) sol[i]) + "<br />";
-                else
-                    resultString += "x<sub><small>" + (i + 1) + "</small></sub>" + " = " + sol[i] + "<br />";
+                resultString += "x<sub><small>" + (i + 1) + "</small></sub>" + " = " + df.format(sol[i]) + "<br />";
             }
         } catch (Exception e) {
             resultString = "Infinité ou pas de résultat, on ne sait pas encore";
