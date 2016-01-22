@@ -9,6 +9,7 @@
 
     <string name="system">Systeme d\'equation lineaire</string>
     <string name="polynomial">Polynome</string>
+    <string name="calc">Calculatrice de nombres complexes</string>
     <string name="size">Taille</string>
     <string name="ok">OK</string>
     <string name="degree">Degre</string>
