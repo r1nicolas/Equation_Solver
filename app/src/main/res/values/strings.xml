@@ -4,6 +4,7 @@
     <string name="title_activity_get_input_system">Systeme d\'equation lineaire</string>
     <string name="title_activity_get_polynomial_degree">Polynome</string>
     <string name="title_activity_get_input_polynomial">Polynome</string>
+    <string name="title_activity_complex_calculator">Calculatrice de nombres complexes</string>
 
     <string name="action_settings">Options</string>
 
