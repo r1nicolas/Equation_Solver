@@ -16,4 +16,43 @@
     <string name="degree">Degre</string>
 
     <string name="hello_world">Hello world!</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="e">e</string>
+    <string name="i">i</string>
+    <string name="pi">π</string>
+    
+    <string name="cos">cos</string>
+    <string name="sin">sin</string>
+    <string name="tan">tan</string>
+    <string name="acos">acos</string>
+    <string name="asin">asin</string>
+    <string name="atan">atan</string>
+    <string name="cosh">cosh</string>
+    <string name="sinh">sinh</string>
+    <string name="tanh">tanh</string>
+    <string name="acosh">acosh</string>
+    <string name="asinh">asinh</string>
+    <string name="atanh">atanh</string>
+
+    <string name="ans">Ans</string>
+    <string name="leftarrow">←</string>
+    <string name="clr">clr</string>
+
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="mult">*</string>
+    <string name="div">/</string>
+    <string name="equal">=</string>
+    <string name="pow">Pow</string>
+    <string name="log">Log</string>
 </resources>

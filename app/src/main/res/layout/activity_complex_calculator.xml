@@ -15,37 +15,37 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal">
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="7"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="8"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="9"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:textAllCaps="false"
-                android:text="Ans"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="←"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="clr"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/seven"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/eight"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/nine"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="@string/ans"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/leftarrow"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/clr"/>
     </LinearLayout>
     <LinearLayout
         android:layout_weight="1"
@@ -56,104 +56,33 @@
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="4"/>
+                android:text="@string/four"/>
             <Button
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="5"/>
+                android:text="@string/five"/>
             <Button
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="6"/>
+                android:text="@string/six"/>
             <Button
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="+"/>
+                android:text="@string/plus"/>
             <Button
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="*"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:textAllCaps="false"
-                android:text="Pow"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal">
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="1"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="2"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="3"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="-"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="/"/>
+                android:text="@string/mult"/>
             <Button
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
-                android:text="Log"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal">
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="0"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:textAllCaps="false"
-                android:text="e"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:textAllCaps="false"
-                android:text="i"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:textAllCaps="false"
-                android:text="π"/>
-            <Button
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="2"
-                android:text="="/>
+                android:text="@string/pow"/>
     </LinearLayout>
     <LinearLayout
         android:layout_weight="1"
@@ -164,38 +93,67 @@
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:textAllCaps="false"
-            android:text="cos"/>
+            android:text="@string/one"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/two"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/three"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/minus"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/div"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:text="sin"/>
+            android:text="@string/log"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/zero"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:text="tan"/>
+            android:text="@string/e"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:text="acos"/>
+            android:text="@string/i"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:text="asin"/>
+            android:text="@string/pi"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:textAllCaps="false"
-            android:text="atan"/>
+            android:layout_weight="2"
+            android:text="@string/equal"/>
     </LinearLayout>
     <LinearLayout
         android:layout_weight="1"
@@ -207,36 +165,78 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:text="cosh"/>
+            android:text="@string/cos"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:text="sinh"/>
+            android:text="@string/sin"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:text="tanh"/>
+            android:text="@string/tan"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:text="acosh"/>
+            android:text="@string/acos"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:text="asinh"/>
+            android:text="@string/asin"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:text="atanh"/>
+            android:text="@string/atan"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="@string/cosh"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="@string/sinh"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="@string/tanh"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="@string/acosh"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="@string/asinh"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="@string/atanh"/>
     </LinearLayout>
 </LinearLayout>
